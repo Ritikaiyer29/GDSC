@@ -1,0 +1,30 @@
+d=input("Enter a sentence")
+def StringManipulation(str):
+    l=[]
+    for i in range(0,len(str)):
+        if ord(str[i])==90:
+             l.append(chr(65))
+        elif ord(str[i])==122:
+             l.append(chr(97))
+        elif str[i].isalpha():
+            l.append(chr((ord(str[i]))+1))
+        else:
+           l.append(str[i])
+    a=""
+    for j in l:
+        a+=j
+    print(a)
+    lrev=[]
+    for k in l:
+        if k not in ['a','e','i','o','u','A','E','I','O','U']:
+            lrev.append(k)
+    lrev.reverse()
+    b=""
+    for m in lrev:
+        b+=m
+    print(b)
+    o=""
+    for n in range(0,len(l),2):
+        o+=d[n]
+    print (o)    
+StringManipulation(d)  
