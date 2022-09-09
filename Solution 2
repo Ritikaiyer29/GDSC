@@ -1,0 +1,10 @@
+import pandas as pd
+url='https://raw.githubusercontent.com/GDSC-NMIMS-MPSTME-Mumbai/AI-Recruitment-Task-22/main/titanic.csv'
+a=pd.read_csv(url)
+f=a._get_numeric_data()
+print (f)
+b=f["Age"].mean()
+c=f["Fare"].mean()
+f["Age"].fillna(b,inplace=True)
+f["Fare"].fillna(c,inplace=True)
+print (f)
